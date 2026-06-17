@@ -1,0 +1,65 @@
+Command line invocation:
+    /Applications/Xcode_26.3.app/Contents/Developer/usr/bin/xcodebuild archive -workspace ./NeonCalculator.xcworkspace -scheme NeonCalculator -configuration Release -destination generic/platform=iOS -archivePath /Users/runner/work/NeonCalculator/NeonCalculator/build.xcarchive
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (6 targets)
+    Target 'NeonCalculator' in project 'NeonCalculator'
+        ➜ Implicit dependency on target 'Pods-NeonCalculator' in project 'Pods' via file 'Pods_NeonCalculator.framework' in build phase 'Link Binary'
+        ➜ Implicit dependency on target 'PurchaseSharedKit' in project 'Pods' via options '-framework PurchaseSharedKit' in build setting 'OTHER_LDFLAGS'
+    Target 'Pods-NeonCalculator' in project 'Pods'
+        ➜ Explicit dependency on target 'PurchaseSharedKit' in project 'Pods'
+        ➜ Explicit dependency on target 'UMAPM' in project 'Pods'
+        ➜ Explicit dependency on target 'UMCommon' in project 'Pods'
+        ➜ Explicit dependency on target 'UMDevice' in project 'Pods'
+    Target 'PurchaseSharedKit' in project 'Pods'
+        ➜ Explicit dependency on target 'UMAPM' in project 'Pods'
+        ➜ Explicit dependency on target 'UMCommon' in project 'Pods'
+        ➜ Explicit dependency on target 'UMDevice' in project 'Pods'
+    Target 'UMAPM' in project 'Pods'
+        ➜ Explicit dependency on target 'UMCommon' in project 'Pods'
+    Target 'UMCommon' in project 'Pods'
+        ➜ Explicit dependency on target 'UMDevice' in project 'Pods'
+    Target 'UMDevice' in project 'Pods' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode_26.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode_26.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode_26.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -x objective-c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/runner/work/NeonCalculator/NeonCalculator/Sources/Resources/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -V
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 4d87cf64331a53dbb21ce21914fe34ff
+Build description path: /Users/runner/Library/Developer/Xcode/DerivedData/NeonCalculator-clccfynyrxobdhbeheqsizziedyb/Build/Intermediates.noindex/ArchiveIntermediates/NeonCalculator/IntermediateBuildFilesPath/XCBuildData/4d87cf64331a53dbb21ce21914fe34ff.xcbuilddata
+/Users/runner/work/NeonCalculator/NeonCalculator/NeonCalculator.xcodeproj: error: Provisioning profile "appstore-6776479693-20260617063523131" doesn't include the App Groups capability. (in target 'NeonCalculator' from project 'NeonCalculator')
+/Users/runner/work/NeonCalculator/NeonCalculator/NeonCalculator.xcodeproj: error: Provisioning profile "appstore-6776479693-20260617063523131" doesn't support the group.com.laiyvzhong.ring App Group. (in target 'NeonCalculator' from project 'NeonCalculator')
+/Users/runner/work/NeonCalculator/NeonCalculator/NeonCalculator.xcodeproj: error: Provisioning profile "appstore-6776479693-20260617063523131" doesn't include the com.apple.security.application-groups entitlement. (in target 'NeonCalculator' from project 'NeonCalculator')
+** ARCHIVE FAILED **
+
+
+The following build commands failed:
+	Archiving workspace NeonCalculator with scheme NeonCalculator
+(1 failure)
